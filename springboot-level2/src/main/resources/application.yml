@@ -4,7 +4,6 @@ spring:
     properties:
       hibernate:
         format_sql: true
-    # 테이블 생성 후에 data.sql 생성
     defer-datasource-initialization: true
   datasource:
     url: jdbc:h2:mem:testdb
@@ -12,3 +11,6 @@ spring:
   h2:
     console:
       enabled: true
+jwt:
+  issuer: ajufresh@gmail.com
+  secret_key: study-springboot
