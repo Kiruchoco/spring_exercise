@@ -1,6 +1,4 @@
 spring:
-  profiles:
-    active: secrets
   jpa:
     show-sql: true
     properties:
@@ -18,8 +16,11 @@ spring:
       client:
         registration:
           google:
-            client-id: 28755..
-            client-secret: GOC..
+            client-id: 입력하세요
+            client-secret: 입력하세요
+            scope:
+              - email
+              - profile
 jwt:
   issuer: ajufresh@gmail.com
   secret_key: study-springboot
