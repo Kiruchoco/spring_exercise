@@ -3,6 +3,7 @@ build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
+!**/application-secrets.yml
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
@@ -41,4 +42,3 @@ bin/
 ### Mac OS ###
 .DS_Store
 
-!**/application-secrets.yml
