@@ -1,6 +1,7 @@
 package me.kyle.springbootdeveloper.service;
 
 import lombok.RequiredArgsConstructor;
+
 import me.kyle.springbootdeveloper.domain.User;
 import me.kyle.springbootdeveloper.dto.AddUserRequest;
 import me.kyle.springbootdeveloper.repository.UserRepository;
@@ -10,18 +11,26 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 @Service
 public class UserService {
-    private final UserRepository userRepository;
-    private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    public Long save(AddUserRequest dto){
+    private final UserRepository userRepository;
+
+    public Long save(AddUserRequest dto) {
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+
         return userRepository.save(User.builder()
                 .email(dto.getEmail())
-                .password(bCryptPasswordEncoder.encode(dto.getPassword()))  // 패스워드 암호화
+                .password(encoder.encode(dto.getPassword()))
                 .build()).getId();
     }
 
-    // 메서드 추가
-    public User findById(Long userId){
-        return userRepository.findById(userId).orElseThrow(()-> new IllegalArgumentException("Unexpected user"));
+    public User findById(Long userId) {
+        return userRepository.findById(userId)
+                .orElseThrow(() -> new IllegalArgumentException("Unexpected user"));
     }
+
+    public User findByEmail(String email) {
+        return userRepository.findByEmail(email)
+                .orElseThrow(() -> new IllegalArgumentException("User not found for email: " + email));
+    }
+
 }
