@@ -1,8 +1,9 @@
 # spring_exercise
 
-## hello-spring
-* 스프링 입문 - 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술
-* 링크 : https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8/dashboard
+## 스프링 입문 - 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술 
+* 연습 파일 : hello-spring
+* 참고 링크 : https://www.inflearn.com/
 
-## springboot-developer
-* 참고도서 : 스프링부트 3 백엔드 개발자 되기(자바편)
+## 스프링부트 3 백엔드 개발자 되기(자바편)
+* 연습 파일 : spring-developer, spring-level2, exercise
+* 참고 링크 : https://github.com/shinsunyoung/springboot-developer
