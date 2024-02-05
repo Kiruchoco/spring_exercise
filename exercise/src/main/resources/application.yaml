@@ -14,6 +14,16 @@ spring:
   sql:
     init:
       encoding: utf-8
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 28755
+            client-secret: GO
+            scope:
+              - email
+              - profile
 jwt:
   issuer: ajufresh@gmail.com
   secret_key: study-springboot

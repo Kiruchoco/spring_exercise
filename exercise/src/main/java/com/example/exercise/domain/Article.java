@@ -34,10 +34,14 @@ public class Article {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
+    @Column(name = "author", nullable = false)
+    private String author;
+
     @Builder
-    private Article(String title, String content){
-        this.title=title;
-        this.content=content;
+    private Article(String author, String title, String content){
+        this.title = title;
+        this.content = content;
+        this.author = author;
     }
 
     public void update(String title, String content){
