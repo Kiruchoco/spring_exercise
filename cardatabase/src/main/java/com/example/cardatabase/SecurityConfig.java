@@ -48,6 +48,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authenticationEntryPoint(exceptionHandler).and()
                 .addFilterBefore(authenticationFilter,
                         UsernamePasswordAuthenticationFilter.class);
+//        http.csrf().disable().cors().and()
+//                .authorizeRequests().anyRequest().permitAll();
     }
 
 
